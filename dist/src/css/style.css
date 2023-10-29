@@ -54,13 +54,17 @@ Others
   color: #d946ef;
 }
 
-#card {
+#back {
+  top: 50px;
+}
+
+#card > #front {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 80%;
   height: 50%;
-  max-width: 1280px;
+  max-width: 900px;
   background-color: #fff;
   background-image: url(../img/ASCII-art.png);
   background-repeat: no-repeat;
@@ -71,8 +75,37 @@ Others
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: perspective(600px) translate(-50%, -50%) rotateY(0deg);
+  transition: transform 0.6s linear 0s;
+  backface-visibility: hidden;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.251);
+}
+
+#card > #back {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  height: 50%;
+  max-width: 900px;
+  background-color: #fff;
+  padding: 40px 60px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: perspective(600px) translate(-50%, -50%) rotateY(180deg);
+  transition: transform 0.6s linear 0s;
+  backface-visibility: hidden;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.251);
+}
+
+#card:hover > #front {
+  transform: perspective(600px) translate(-50%, -50%) rotateY(-180deg);
+}
+
+#card:hover > #back {
+  transform: perspective(600px) translate(-50%, -50%) rotateY(0deg);
 }
 
 #details__section {
@@ -107,6 +140,33 @@ Others
 }
 .details a:hover {
   text-decoration: underline;
+}
+
+#projects__section {
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2px;
+}
+.project__name, .project__status {
+  font-family: "Pixelify Sans", sans-serif;
+  color: #000;
+}
+.project__name a {
+  color: #000;
+}
+.project__status {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.project__status--active {
+  color: #34d399;
 }
 
 *,
@@ -144,7 +204,7 @@ h5 {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 700;
 }
 
@@ -169,13 +229,14 @@ h5 {
 
 h1,
 h2,
+h3,
+h4,
 h5 {
   color: #000;
 }
 
 h3,
 h4 {
-  color: hsl(208, 49%, 24%);
   font-weight: 700;
 }
 

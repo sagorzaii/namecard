@@ -1,0 +1,28 @@
+#projects__section {
+  display: flex;
+  flex-direction: column;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2px;
+
+  &__name,
+  &__status {
+    font-family: $ff-tertiary;
+    color: $black;
+  }
+  &__name a {
+    color: $black;
+  }
+  &__status {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+
+    &--active {
+      color: $vGreen;
+    }
+  }
+}

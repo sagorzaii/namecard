@@ -2,6 +2,7 @@
 @import "./layout/intro";
 @import "./layout/card";
 @import "./layout/details";
+@import "./layout/projects";
 
 *,
 ::after,
@@ -34,7 +35,7 @@ h5 {
   font-family: $ff-primary;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: $fw700;
 }
 h2 {
@@ -54,12 +55,13 @@ h5 {
 }
 h1,
 h2,
+h3,
+h4,
 h5 {
   color: $black;
 }
 h3,
 h4 {
-  color: $vdarkBlue;
   font-weight: $fw700;
 }
 p {
