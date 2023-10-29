@@ -1,0 +1,67 @@
+@import "./config/variables";
+@import "./layout/intro";
+@import "./layout/card";
+@import "./layout/details";
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $ff-secondary;
+  font-size: $bodySize;
+  background-color: $bgLightGrey;
+  color: $vDarkBody;
+  line-height: $lHeightOne;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $white;
+}
+// site wise
+h1,
+h2,
+h4,
+h5 {
+  line-height: $lHeightOne;
+  margin-bottom: $marginS;
+  font-family: $ff-primary;
+}
+h1 {
+  font-size: 5rem;
+  font-weight: $fw700;
+}
+h2 {
+  font-size: 3rem;
+  font-weight: $fw700;
+}
+h3 {
+  font-size: 1.9rem;
+  font-family: $ff-secondary;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.1rem;
+  font-weight: $fw300;
+}
+h1,
+h2,
+h5 {
+  color: $black;
+}
+h3,
+h4 {
+  color: $vdarkBlue;
+  font-weight: $fw700;
+}
+p {
+  font-family: $ff-primary;
+}

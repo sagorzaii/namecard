@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Pixelify+Sans&family=Zhi+Mang+Xing&display=swap");
+/* ---------------
+Colors 
+---------------*/
+/* ---------------
+Fonts
+---------------*/
+/* ---------------
+Spacings
+---------------*/
+/* ---------------
+Others
+---------------*/
+#intro__section {
+  padding-bottom: 10px;
+}
+
+#name__container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+#name__container .name {
+  margin: 0;
+  text-align: right;
+}
+#name__container #chinese {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+#introduction .prompt__container {
+  color: #334155;
+  margin: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 1.2rem;
+}
+#introduction .prompt {
+  color: #34d399;
+  margin-right: 10px;
+}
+#introduction .prompt__text {
+  color: #d946ef;
+}
+
+#card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  height: 50%;
+  max-width: 1280px;
+  background-color: #fff;
+  background-image: url(../img/ASCII-art.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  padding: 60px 60px 40px 120px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.251);
+}
+
+#details__section {
+  margin: 10px 0px;
+}
+
+#details__container {
+  font-size: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  gap: 20px;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.details > p {
+  margin: 0 0 0 10px;
+  font-family: "Pixelify Sans", sans-serif;
+  color: #334155;
+}
+.details .icon {
+  color: #94a3b8;
+}
+.details a {
+  color: #334155;
+}
+.details a:hover {
+  text-decoration: underline;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Zhi Mang Xing", cursive;
+  font-size: 16px;
+  background-color: #f8fafc;
+  color: #020617;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1,
+h2,
+h4,
+h5 {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: "Permanent Marker", cursive;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.9rem;
+  font-family: "Zhi Mang Xing", cursive;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h5 {
+  color: #000;
+}
+
+h3,
+h4 {
+  color: hsl(208, 49%, 24%);
+  font-weight: 700;
+}
+
+p {
+  font-family: "Permanent Marker", cursive;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+*.sketch
+*.fig
+backup/
+design/
+*.md
+*.txt
+node_modules
+
+*.xd
+
+.DS_Store
+.prettierignore
