@@ -67,7 +67,7 @@ h5 {
 }
 h1 {
   font-size: 2.5rem;
-  font-weight: $fw300;
+  font-weight: $fw700;
 }
 h2 {
   font-size: 3rem;
@@ -89,7 +89,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: $black;
+  color: $white;
 }
 h3,
 h4 {
@@ -97,4 +97,7 @@ h4 {
 }
 p {
   font-family: $ff-primary;
+}
+button {
+  color: $white;
 }

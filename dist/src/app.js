@@ -2,7 +2,8 @@ let front = document.getElementById("front");
 let back = document.getElementById("back");
 let frontBtn = document.getElementById("front__btn");
 let backBtn = document.getElementById("back__btn");
-let cardContent = document.getElementById("card");
+let rotateBtn = document.getElementById("rotate__btn");
+let card = document.getElementById("card");
 
 document.body.addEventListener("pointermove", (e) => {
   const { currentTarget: el, clientX: x, clientY: y } = e;
@@ -16,7 +17,7 @@ frontBtn.addEventListener("click", () => {
   front.classList.toggle("hide");
   back.classList.toggle("show");
   back.classList.toggle("hide");
-  cardContent.classList.add("rotate");
+  card.classList.add("rotate");
 });
 
 backBtn.addEventListener("click", () => {
@@ -24,5 +25,13 @@ backBtn.addEventListener("click", () => {
   front.classList.toggle("hide");
   back.classList.toggle("show");
   back.classList.toggle("hide");
-  cardContent.classList.remove("rotate");
+  card.classList.remove("rotate");
 });
+
+// card.addEventListener("dblclick", () => {
+//   front.classList.toggle("show");
+//   front.classList.toggle("hide");
+//   back.classList.toggle("show");
+//   back.classList.toggle("hide");
+//   card.classList.toggle("rotate");
+// });
