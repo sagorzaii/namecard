@@ -1,8 +1,7 @@
 @import "./config/variables";
-@import "./layout/intro";
-@import "./layout/card";
-@import "./layout/details";
-@import "./layout/projects";
+@import "./layout/text-bg";
+@import "./layout/statement";
+@import "./layout/footer";
 
 *,
 ::after,
@@ -24,7 +23,8 @@ body {
   margin: 0;
   --x: calc(var(--posX, 0) * 1px);
   --y: calc(var(--posY, 0) * 1px);
-  background-image: linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)),
+  background-image: url("../img/me.png"),
+    linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)),
     radial-gradient(
       90% 100% at calc(50% + var(--x)) calc(0% + var(--y)),
       rgb(200 200 200),
@@ -46,8 +46,11 @@ body {
       rgb(000 200 255)
     ),
     linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
-  background-blend-mode: overlay, difference, difference, difference, overlay,
-    difference;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay, color-dodge, difference, difference,
+    difference, overlay, overlay;
 }
 ul {
   list-style-type: none;
@@ -100,4 +103,12 @@ p {
 }
 button {
   color: $white;
+}
+@media (min-width: 768px) {
+  body {
+    background-size: contain;
+  }
+  h1 {
+    font-size: 6rem;
+  }
 }

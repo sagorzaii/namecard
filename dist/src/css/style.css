@@ -11,157 +11,68 @@ Spacings
 /* ---------------
 Others
 ---------------*/
-#intro__section {
+#text-bg-container {
+  position: absolute;
   width: 100%;
   height: 100%;
-  padding: 16px;
-}
-
-#name__container {
-  text-align: center;
-}
-
-#name {
-  text-transform: uppercase;
-  letter-spacing: 1rem;
-}
-
-#introduction {
-  text-align: center;
-}
-
-#card {
-  display: block;
-  width: 96%;
-  height: 96%;
-  max-width: 963px;
-  max-height: 963px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: perspective(2000px) translate(-50%, -50%);
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  border-radius: 10px;
-  border: 1px solid #fff;
-  background-color: #000;
-  cursor: pointer;
   overflow: hidden;
+  white-space: nowrap;
+  color: #fff;
 }
 
-#card__content {
+.text-bg {
+  width: fit-content;
+  height: calc(33.3333333333vh + 5px);
+  font-size: 10rem;
+  font-weight: bold;
+  opacity: 0.02;
+  pointer-events: none;
+  user-select: none;
+}
+
+#statement-container {
   width: 100%;
-  height: 100%;
-  padding: 16px;
-  position: relative;
-  z-index: 2;
-}
-
-#front,
-#back {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  backface-visibility: hidden;
-}
-
-#back {
-  top: 50%;
-  left: 50%;
-  transform: perspective(2000px) translate(-50%, -50%) rotateY(360deg);
-}
-
-#card.rotate {
-  transform: perspective(2000px) translate(-50%, -50%) rotateY(360deg);
-}
-
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
-}
-
-.rotate__btn {
-  width: 100%;
-  border: none;
-  background-color: transparent;
-  text-align: center;
-  cursor: pointer;
-  margin: 16px auto;
-  text-decoration: underline;
-}
-
-@media (min-width: 768px) {
-  .main__content {
-    justify-content: space-around;
-  }
-  #card {
-    max-width: 819px;
-    max-height: 450px;
-  }
-}
-#details__section {
-  margin: 10px 0px;
-}
-
-#details__container {
-  font-size: 0.6rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
-  gap: 20px;
-}
-
-.details {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-.details > p {
-  margin: 0 0 0 10px;
-  font-family: "Source Code Pro", monospace;
-  color: #334155;
-}
-.details .icon {
-  color: #94a3b8;
-}
-.details a {
-  color: #334155;
-}
-.details a:hover {
-  text-decoration: underline;
-}
-
-#projects__section {
-  display: flex;
-  flex-direction: column;
-}
-
-.project {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  gap: 2px;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
 }
-.project__name, .project__status {
-  font-family: "Source Code Pro", monospace;
-  color: #000;
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin: 0px 0px 16px 0px;
+  padding: 0px 16px;
 }
-.project__name a {
-  color: #000;
+
+#footer-content {
+  width: 100%;
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  text-align: center;
 }
-.project__status {
-  text-transform: uppercase;
-  font-size: 0.8rem;
+
+.icons {
+  width: 50px;
+  height: 50px;
 }
-.project__status--active {
-  color: #34d399;
+
+#project-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  z-index: 2;
+  margin-bottom: 100px;
+}
+
+.projects {
+  text-decoration: underline;
 }
 
 *,
@@ -182,8 +93,11 @@ body {
   margin: 0;
   --x: calc(var(--posX, 0) * 1px);
   --y: calc(var(--posY, 0) * 1px);
-  background-image: linear-gradient(115deg, rgb(211, 255, 215), rgb(0, 0, 0)), radial-gradient(90% 100% at calc(50% + var(--x)) calc(0% + var(--y)), rgb(200, 200, 200), rgb(22, 0, 45)), radial-gradient(100% 100% at calc(80% - var(--x)) calc(0% - var(--y)), rgb(250, 255, 0), rgb(36, 0, 0)), radial-gradient(150% 210% at calc(100% + var(--x)) calc(0% + var(--y)), rgb(20, 175, 125), rgb(0, 10, 255)), radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255, 77, 0), rgb(0, 200, 255)), linear-gradient(60deg, rgb(255, 0, 0), rgb(120, 86, 255));
-  background-blend-mode: overlay, difference, difference, difference, overlay, difference;
+  background-image: url("../img/me.png"), linear-gradient(115deg, rgb(211, 255, 215), rgb(0, 0, 0)), radial-gradient(90% 100% at calc(50% + var(--x)) calc(0% + var(--y)), rgb(200, 200, 200), rgb(22, 0, 45)), radial-gradient(100% 100% at calc(80% - var(--x)) calc(0% - var(--y)), rgb(250, 255, 0), rgb(36, 0, 0)), radial-gradient(150% 210% at calc(100% + var(--x)) calc(0% + var(--y)), rgb(20, 175, 125), rgb(0, 10, 255)), radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255, 77, 0), rgb(0, 200, 255)), linear-gradient(60deg, rgb(255, 0, 0), rgb(120, 86, 255));
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay, color-dodge, difference, difference, difference, overlay, overlay;
 }
 
 ul {
@@ -247,6 +161,15 @@ p {
 
 button {
   color: #fff;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-size: contain;
+  }
+  h1 {
+    font-size: 6rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
