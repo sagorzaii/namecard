@@ -164,6 +164,24 @@ Others
   color: #34d399;
 }
 
+#text-bg-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(#fff);
+}
+
+.text-bg {
+  width: fit-content;
+  height: calc(33.3333333333vh + 5px);
+  font-size: 10rem;
+  font-weight: bold;
+  opacity: 0.01;
+  pointer-events: none;
+  user-select: none;
+}
+
 *,
 ::after,
 ::before {
