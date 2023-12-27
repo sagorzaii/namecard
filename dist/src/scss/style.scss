@@ -2,7 +2,6 @@
 @import "./layout/text-bg";
 @import "./layout/statement";
 @import "./layout/footer";
-@import "./layout/name";
 
 *,
 ::after,
@@ -50,8 +49,8 @@ body {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-blend-mode: overlay, overlay, difference, difference, difference,
-    overlay, difference;
+  background-blend-mode: overlay, color-dodge, difference, difference,
+    difference, overlay, overlay;
 }
 ul {
   list-style-type: none;
@@ -108,5 +107,8 @@ button {
 @media (min-width: 768px) {
   body {
     background-size: contain;
+  }
+  h1 {
+    font-size: 6rem;
   }
 }
