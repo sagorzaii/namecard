@@ -2,12 +2,16 @@
   "name": "namecard",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./dist/src/scss/style.scss ./dist/src/css/style.css"
+    "sass": "sass --watch ./dist/src/scss/style.scss ./dist/src/css/style.css",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
 }
