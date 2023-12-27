@@ -1,8 +1,7 @@
 @import "./config/variables";
-@import "./layout/intro";
-@import "./layout/card";
-@import "./layout/details";
-@import "./layout/projects";
+@import "./layout/text-bg";
+@import "./layout/statement";
+@import "./layout/footer";
 
 *,
 ::after,
@@ -14,9 +13,44 @@
 body {
   font-family: $ff-secondary;
   font-size: $bodySize;
-  background-color: $bgLightGrey;
-  color: $vDarkBody;
+  // background-color: $bgLightGrey;
+  color: $white;
   line-height: $lHeightOne;
+
+  // https://codepen.io/MarkBoots/pen/LYjvEJj
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  --x: calc(var(--posX, 0) * 1px);
+  --y: calc(var(--posY, 0) * 1px);
+  background-image: url("../img/me.png"),
+    linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)),
+    radial-gradient(
+      90% 100% at calc(50% + var(--x)) calc(0% + var(--y)),
+      rgb(200 200 200),
+      rgb(022 000 045)
+    ),
+    radial-gradient(
+      100% 100% at calc(80% - var(--x)) calc(0% - var(--y)),
+      rgb(250 255 000),
+      rgb(036 000 000)
+    ),
+    radial-gradient(
+      150% 210% at calc(100% + var(--x)) calc(0% + var(--y)),
+      rgb(020 175 125),
+      rgb(000 010 255)
+    ),
+    radial-gradient(
+      100% 100% at calc(100% - var(--x)) calc(30% - var(--y)),
+      rgb(255 077 000),
+      rgb(000 200 255)
+    ),
+    linear-gradient(60deg, rgb(255 000 000), rgb(120 086 255));
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay, color-dodge, difference, difference,
+    difference, overlay, overlay;
 }
 ul {
   list-style-type: none;
@@ -35,7 +69,7 @@ h5 {
   font-family: $ff-primary;
 }
 h1 {
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: $fw700;
 }
 h2 {
@@ -58,7 +92,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: $black;
+  color: $white;
 }
 h3,
 h4 {
@@ -66,4 +100,15 @@ h4 {
 }
 p {
   font-family: $ff-primary;
+}
+button {
+  color: $white;
+}
+@media (min-width: 768px) {
+  body {
+    background-size: contain;
+  }
+  h1 {
+    font-size: 6rem;
+  }
 }

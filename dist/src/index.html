@@ -16,81 +16,91 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./img/ASCII-art.png" />
     <title>Siew Tian Sheng</title>
   </head>
 
   <body>
     <header></header>
 
-    <div id="card">
-      <div id="front">
-        <section id="intro__section">
-          <div id="name__container">
-            <h1 class="name">Siew Tian Sheng</h1>
-
-            <div id="chinese">
-              <h3 class="name">萧</h3>
-              <h3 class="name">钿</h3>
-              <h3 class="name">晟</h3>
-            </div>
-          </div>
-
-          <div id="introduction">
-            <p id="title" class="prompt__container">
-              /im/
-              <span class="prompt prompt__text">a</span>
-              <span class="prompt">></span>software developer
-            </p>
-            <p id="location" class="prompt__container">
-              /based/
-              <span class="prompt prompt__text">at</span>
-              <span class="prompt">></span>kuala lumpur --malaysia
-            </p>
-            <p id="job" class="prompt__container">
-              /currently/work/
-              <span class="prompt prompt__text">for</span>
-              <span class="prompt">></span>mmob sdn bhd
-            </p>
-          </div>
-        </section>
-      </div>
-
-      <div id="back">
-        <section id="projects__section">
-          <h4>Projects</h4>
-          <div class="project">
-            <p class="project__name">
-              <a href="https://sagorzaii.github.io/sgz_ui/">Design Library</a>
-            </p>
-            <p class="project__status project__status--active">active</p>
-          </div>
-        </section>
-
-        <section id="details__section">
-          <div id="details__container">
-            <div id="work" class="details">
-              <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
-              <p><a href="https://www.mmob.com/">mmob sdn bhd</a></p>
-            </div>
-            <div id="mail" class="details">
-              <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-              <p>siewtiansheng@gmail.com</p>
-            </div>
-            <div id="social" class="details">
-              <span class="icon"><i class="fa-brands fa-linkedin-in"></i></span>
-              <p>
-                <a href="https://www.linkedin.com/in/tian-sheng-siew-6010a7177/"
-                  >tian sheng siew</a
-                >
-              </p>
-            </div>
-            <div id="github" class="details">
-              <span class="icon"><i class="fa-brands fa-github"></i></span>
-              <p><a href="https://github.com/sagorzaii">sagorzaii</a></p>
-            </div>
-          </div>
-        </section>
-      </div>
+    <div id="text-bg-container">
+      <div class="text-bg">404 NOT FOUND 404 NOT FOUND</div>
+      <div class="text-bg">INTERNAL SERVER ERROR 500</div>
+      <div class="text-bg">403 FORBIDDEN 403 FORBIDDEN</div>
     </div>
+
+    <div id="colour-bg"></div>
+
+    <div id="statement-container">
+      <h1 id="statement">SHENG WRITE CODE.</h1>
+    </div>
+
+    <footer>
+      <div id="project-container">
+        👉
+        <a
+          href="https://sagorzaii.github.io/sgz_ui/"
+          target="_blank"
+          class="projects"
+        >
+          <p>design library</p>
+        </a>
+        <!-- |
+        <a href="#">
+          <p>project 2</p>
+        </a> -->
+      </div>
+      <div id="footer-content">
+        <div class="icons">
+          <a
+            href="https://www.linkedin.com/in/tian-sheng-siew-6010a7177/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <div class="icons">
+          <a href="https://github.com/sagorzaii" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+        <div class="icons">
+          <a
+            href="https://siewts.notion.site/Siew-Tian-Sheng-ff605d4fafcc457c87b6dc7d2c6d8ba3?pvs=4"
+            target="_blank"
+            ><i class="fa-solid fa-file"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <!-- <div id="card">
+      <div id="bg__img"></div>
+      <div id="card__content">
+        <div id="front" class="show">
+          <section id="intro__section">
+            <div id="name__container">
+              <h1 id="name">sheng</h1>
+            </div>
+            <div id="introduction">
+              <p>software developer</p>
+              <p>based at KL, Malaysia</p>
+            </div>
+            <button type="button" id="front__btn" class="rotate__btn">
+              flip card
+            </button>
+          </section>
+        </div>
+
+        <div id="back" class="hide">
+          <div id="name__container">
+            <h1 id="name">晟 Sheng</h1>
+          </div>
+          <button type="button" id="back__btn" class="rotate__btn">
+            flip card
+          </button>
+        </div>
+      </div>
+    </div> -->
+
+    <script src="./app.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Pixelify+Sans&family=Zhi+Mang+Xing&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;400;700&family=Source+Code+Pro:wght@300;700&display=swap");
 /* ---------------
 Colors 
 ---------------*/
@@ -11,162 +11,68 @@ Spacings
 /* ---------------
 Others
 ---------------*/
-#intro__section {
-  padding-bottom: 10px;
+#text-bg-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #fff;
 }
 
-#name__container {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  gap: 50px;
-  margin-bottom: 40px;
-}
-#name__container .name {
-  margin: 0;
-  text-align: right;
-}
-#name__container #chinese {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.text-bg {
+  width: fit-content;
+  height: calc(33.3333333333vh + 5px);
+  font-size: 10rem;
+  font-weight: bold;
+  opacity: 0.02;
+  pointer-events: none;
+  user-select: none;
 }
 
-#introduction {
+#statement-container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-}
-#introduction .prompt__container {
-  color: #334155;
-  margin: 0;
-  display: flex;
-  justify-content: right;
   align-items: center;
-  font-size: 1.2rem;
-}
-#introduction .prompt {
-  color: #34d399;
-  margin-right: 10px;
-}
-#introduction .prompt__text {
-  color: #d946ef;
+  text-align: center;
+  padding: 16px;
 }
 
-#back {
-  top: 50px;
-}
-
-#card > #front {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 80%;
-  height: 50%;
-  max-width: 900px;
-  background-color: #fff;
-  background-image: url(../img/ASCII-art.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
-  padding: 60px 60px 40px 120px;
-  margin: auto;
+footer {
+  width: 100%;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: perspective(600px) translate(-50%, -50%) rotateY(0deg);
-  transition: transform 0.6s linear 0s;
-  backface-visibility: hidden;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.251);
+  bottom: 0;
+  margin: 0px 0px 16px 0px;
+  padding: 0px 16px;
 }
 
-#card > #back {
+#footer-content {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 80%;
-  height: 50%;
-  max-width: 900px;
-  background-color: #fff;
-  padding: 40px 60px;
-  margin: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: perspective(600px) translate(-50%, -50%) rotateY(180deg);
-  transition: transform 0.6s linear 0s;
-  backface-visibility: hidden;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.251);
+  font-size: 2rem;
+  justify-content: center;
+  text-align: center;
 }
 
-#card:hover > #front {
-  transform: perspective(600px) translate(-50%, -50%) rotateY(-180deg);
+.icons {
+  width: 50px;
+  height: 50px;
 }
 
-#card:hover > #back {
-  transform: perspective(600px) translate(-50%, -50%) rotateY(0deg);
-}
-
-#details__section {
-  margin: 10px 0px;
-}
-
-#details__container {
-  font-size: 0.6rem;
+#project-container {
   display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
-  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  z-index: 2;
+  margin-bottom: 100px;
 }
 
-.details {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-.details > p {
-  margin: 0 0 0 10px;
-  font-family: "Pixelify Sans", sans-serif;
-  color: #334155;
-}
-.details .icon {
-  color: #94a3b8;
-}
-.details a {
-  color: #334155;
-}
-.details a:hover {
+.projects {
   text-decoration: underline;
-}
-
-#projects__section {
-  display: flex;
-  flex-direction: column;
-}
-
-.project {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2px;
-}
-.project__name, .project__status {
-  font-family: "Pixelify Sans", sans-serif;
-  color: #000;
-}
-.project__name a {
-  color: #000;
-}
-.project__status {
-  text-transform: uppercase;
-  font-size: 0.8rem;
-}
-.project__status--active {
-  color: #34d399;
 }
 
 *,
@@ -178,11 +84,20 @@ Others
 }
 
 body {
-  font-family: "Zhi Mang Xing", cursive;
+  font-family: "Source Code Pro", monospace;
   font-size: 16px;
-  background-color: #f8fafc;
-  color: #020617;
+  color: #fff;
   line-height: 1.6;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  --x: calc(var(--posX, 0) * 1px);
+  --y: calc(var(--posY, 0) * 1px);
+  background-image: url("../img/me.png"), linear-gradient(115deg, rgb(211, 255, 215), rgb(0, 0, 0)), radial-gradient(90% 100% at calc(50% + var(--x)) calc(0% + var(--y)), rgb(200, 200, 200), rgb(22, 0, 45)), radial-gradient(100% 100% at calc(80% - var(--x)) calc(0% - var(--y)), rgb(250, 255, 0), rgb(36, 0, 0)), radial-gradient(150% 210% at calc(100% + var(--x)) calc(0% + var(--y)), rgb(20, 175, 125), rgb(0, 10, 255)), radial-gradient(100% 100% at calc(100% - var(--x)) calc(30% - var(--y)), rgb(255, 77, 0), rgb(0, 200, 255)), linear-gradient(60deg, rgb(255, 0, 0), rgb(120, 86, 255));
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay, color-dodge, difference, difference, difference, overlay, overlay;
 }
 
 ul {
@@ -200,11 +115,11 @@ h4,
 h5 {
   line-height: 1.6;
   margin-bottom: 1rem;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Source Code Pro", monospace;
 }
 
 h1 {
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -215,7 +130,7 @@ h2 {
 
 h3 {
   font-size: 1.9rem;
-  font-family: "Zhi Mang Xing", cursive;
+  font-family: "Source Code Pro", monospace;
 }
 
 h4 {
@@ -232,7 +147,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: #000;
+  color: #fff;
 }
 
 h3,
@@ -241,7 +156,20 @@ h4 {
 }
 
 p {
-  font-family: "Permanent Marker", cursive;
+  font-family: "Source Code Pro", monospace;
+}
+
+button {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-size: contain;
+  }
+  h1 {
+    font-size: 6rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
